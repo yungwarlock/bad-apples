@@ -1,0 +1,13 @@
+[Unit]
+Description=Bad apples service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/bad_apples
+
+[Install]
+WantedBy=multi-user.target
